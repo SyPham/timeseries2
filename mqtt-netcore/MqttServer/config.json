@@ -1,0 +1,9 @@
+{
+  "Port": 1886,
+  "Users": [
+    {
+      "UserName": "Hans",
+      "Password": "Test"
+    }
+  ]
+}
