@@ -1,0 +1,34 @@
+<h2 class="content-block">Chart</h2>
+<div class="content-block">
+  <div class="dx-card responsive-paddings">
+    .
+    <dx-chart
+      id="chart"
+      [dataSource]="grossProductData"
+      [stickyHovering]="false"
+      title="Time Series Data"
+    >
+    <dxo-argument-axis> <!-- or dxi-value-axis, or dxo-common-axis-settings -->
+      <dxo-label
+          overlappingBehavior="rotate"
+          [rotationAngle]="45">
+      </dxo-label>
+  </dxo-argument-axis>
+      <dxi-series valueField="value" name="timestamp"></dxi-series>
+      <dxo-common-series-settings
+        argumentField="timestamp"
+        type="spline"
+        hoverMode="includePoints"
+      >
+        <dxo-point hoverMode="allArgumentPoints"></dxo-point>
+      </dxo-common-series-settings>
+      <dxo-legend
+        verticalAlignment="bottom"
+        horizontalAlignment="center"
+        hoverMode="excludePoints"
+      >
+      </dxo-legend>
+      <dxo-export [enabled]="true"></dxo-export>
+    </dx-chart>
+  </div>
+</div>

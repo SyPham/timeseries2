@@ -16,7 +16,7 @@ namespace MQTTSERVER
     {
         private const string MyTopic = "/hello/data";
         private const string MQTTServerUrl = "localhost";
-        private const int MQTTPort = 1886;
+        private const int MQTTPort = 1883;
         static async Task Main(string[] args)
         {
             // Configure MQTT server.
@@ -32,7 +32,8 @@ namespace MQTTSERVER
             var mqttClient = factory.CreateMqttClient();
 
             var options = new MqttClientOptionsBuilder()
-            .WithTcpServer(MQTTServerUrl, MQTTPort)
+                .WithClientId("Henry")
+            .WithWebSocketServer("localhost:1886/mqtt")
             .Build();
 
 

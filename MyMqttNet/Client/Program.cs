@@ -6,7 +6,8 @@ using System;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-namespace client
+
+namespace Client
 {
     class Program
     {
@@ -78,7 +79,7 @@ namespace client
 
                 await SetInterval(async () =>
                 {
-                    var data = new 
+                    var data = new
                     {
                         value = ToRandomInt(248, 260),
                         timestamp = DateTime.Now
